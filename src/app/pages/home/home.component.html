@@ -1,0 +1,8 @@
+<div class="home">
+    <app-header></app-header>
+    <section class="projects">
+        <app-project *ngIf="currentProject" [project]="currentProject"
+            (backClicked)="handleBackClicked()"></app-project>
+        <app-projects *ngIf="!currentProject" (projectClicked)="handleProjectClicked($event)"></app-projects>
+    </section>
+</div>

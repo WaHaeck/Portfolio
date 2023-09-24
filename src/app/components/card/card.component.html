@@ -1,0 +1,12 @@
+<div *ngIf="project" class="card" [class.disabled]="isDisabled" (mouseover)="handleHover()"
+    (mouseleave)="handleMouseLeft()">
+    <img [src]="project.images[0]">
+    <div class="info">
+        <div class="content">
+            <h3>{{project.name}}</h3>
+            <div class="description">
+                <p>{{project.shortDescription}}</p>
+            </div>
+        </div>
+    </div>
+</div>

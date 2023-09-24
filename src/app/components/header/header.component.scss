@@ -1,0 +1,43 @@
+@import './../../../constants.scss';
+
+:host {
+    display: flex;
+    background-color: $color;
+    padding: 80px;
+    justify-content: center;
+    gap: 60px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
+
+.content {
+    max-width: 600px;
+    color: white;
+
+    h2 {
+        margin-top: 0px;
+        color: $accent;
+    }
+
+    .socials {
+        margin-top: 20px;
+        display: flex;
+        justify-content: left;
+        gap: 5px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

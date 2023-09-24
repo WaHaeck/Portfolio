@@ -1,0 +1,76 @@
+@import './../../../constants.scss';
+
+
+.container {
+    padding: 40px 80px 80px 80px;
+
+    .project {
+        display: flex;
+        gap: 60px;
+        justify-content: center;
+        margin-top: 40px;
+
+        .images {
+            width: 500px;
+            height: 500px;
+        }
+
+        .content {
+            text-align: left;
+
+            h2 {
+                color: $accent;
+                text-transform: uppercase;
+                margin: 0px;
+                margin-bottom: 20px;
+            }
+
+            .tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                margin-bottom: 10px;
+
+                >a {
+                    text-decoration: none;
+                }
+
+                .tag {
+                    background: $color;
+                    padding: 2px 4px;
+                    color: white;
+                    width: fit-content;
+                }
+
+                .role {
+                    background: $accent;
+                    padding: 2px 4px;
+                    color: white;
+                    width: fit-content;
+                }
+
+                .link {
+                    background: $color;
+                    padding: 2px 4px;
+                    color: white;
+                    width: fit-content;
+                    font-size: 0.8rem;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 10px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

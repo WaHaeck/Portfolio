@@ -1,0 +1,37 @@
+<div *ngIf="project" class="container">
+    <app-button class="button" [label]="'back to projects'" (click)="handleBackClicked()"
+        [icon]="'/assets/icons/chevron_left.svg'"></app-button>
+    <div class="project">
+        <div class="images">
+            <app-slideshow [slides]="project.images"></app-slideshow>
+        </div>
+        <div class="content">
+            <h2>/{{project.name}}</h2>
+            <div class="tags">
+                <span *ngFor="let role of project.roles" class="role">{{ role }}</span>
+            </div>
+            <div class="tags">
+                <span *ngFor="let skill of project.tags" class="tag">{{ skill }}</span>
+            </div>
+            <p>{{project.description}}</p>
+            <h3>Learnings</h3>
+            <p>{{project.learnings}}</p>
+            <ng-container *ngIf="project.links">
+                <h3>Links</h3>
+                <div class="tags">
+                    <a *ngFor="let link of project.links" href="{{ link.link }}" target="_blank">
+                        <span class="link">{{ link.label }}</span>
+                    </a>
+                </div>
+            </ng-container>
+            <div class="buttons">
+                <a *ngIf="project.github" [href]="project.github" target="_blank">
+                    <img src="./assets/icons/github.png" />
+                </a>
+                <a *ngIf="project.url" [href]="project.url" target="_blank">
+                    <img src="./assets/icons/website.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

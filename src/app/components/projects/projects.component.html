@@ -1,0 +1,16 @@
+<h2>/SKILLS AND PROJECTS</h2>
+<p>All projects were created/built next to my studies or full-time employment</p>
+<section class="references">
+    <div class="skills">
+        <div class="tags">
+            <span *ngFor="let skill of skills" class="tag"
+                [class.selected]="skill === selectedSkill || isHighlighted(skill)" (mouseover)="handleHover(skill)"
+                (click)="handleSkillClick(skill)" (mouseleave)="handleMouseLeft()">{{
+                skill
+                }}</span>
+        </div>
+    </div>
+    <div class="projects">
+        <app-card *ngFor="let project of projects" [project]="project" (click)="handleProjectClick(project)"></app-card>
+    </div>
+</section>

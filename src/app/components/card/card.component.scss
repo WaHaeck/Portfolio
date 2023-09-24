@@ -1,0 +1,47 @@
+@import "../../../constants.scss";
+
+.card {
+    height: 320px;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.85);
+    }
+
+    .info {
+        position: absolute;
+        bottom: 0px;
+        background: rgba(256, 256, 256, 0.8);
+        width: 100%;
+        color: $color;
+
+        .content {
+            padding: 10px;
+
+            h3 {
+                margin-bottom: 6px;
+                margin-top: 6px;
+            }
+
+            .description {
+                p {
+                    overflow: hidden;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+.disabled {
+    filter: blur(2px) grayscale(1);
+}
