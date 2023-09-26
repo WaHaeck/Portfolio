@@ -41,3 +41,17 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    :host {
+        flex-direction: column;
+    }
+
+    .content {
+        text-align: center;
+
+        .socials {
+            justify-content: center;
+        }
+    }
+}

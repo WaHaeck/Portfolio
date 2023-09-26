@@ -10,10 +10,6 @@
         justify-content: center;
         margin-top: 40px;
 
-        .images {
-            width: 500px;
-            height: 500px;
-        }
 
         .content {
             text-align: left;
@@ -72,5 +68,33 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1070px) {
+    .container {
+        padding: 20px;
+
+        .project {
+            flex-direction: column-reverse;
+
+            .content {
+                text-align: center;
+
+                .tags {
+                    justify-content: center;
+                }
+
+                .buttons {
+                    justify-content: center;
+                }
+            }
+
+            .images {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
     }
 }
