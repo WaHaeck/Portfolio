@@ -11,6 +11,10 @@ import { ProjectComponent } from './components/project/project.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { ButtonComponent } from './components/button/button.component';
 
+import { environment } from 'src/environments/environment';
+import * as firebase from 'firebase/app';
+firebase.initializeApp(environment.firebase);
+
 @NgModule({
   declarations: [
     AppComponent,
