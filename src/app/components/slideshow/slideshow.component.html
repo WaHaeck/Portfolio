@@ -1,5 +1,7 @@
 <section class="slideshow">
-  <div class="slide" [ngStyle]="{ 'background-image': 'url(' + currentSlide + ')' }"></div>
+  <div class="slide">
+    <img src="{{ currentSlide }}" alt="chevron">
+  </div>
   <div class="controls">
     <img src="/assets/icons/chevron_left.svg" alt="chevron" (click)="getPrevSlide()">
     <img src="/assets/icons/chevron_right.svg" alt="chevron" (click)="getNextSlide()">

@@ -4,7 +4,7 @@
     height: 320px;
     position: relative;
     text-align: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
 
     &:hover {
         cursor: pointer;
@@ -20,9 +20,9 @@
     .info {
         position: absolute;
         bottom: 0px;
-        background: rgba(256, 256, 256, 0.8);
+        background: $color;
         width: 100%;
-        color: $color;
+        color: $background;
 
         .content {
             padding: 10px;

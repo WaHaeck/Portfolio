@@ -81,5 +81,6 @@ export class ProjectsComponent {
 
   public handleProjectClick(project: Project): void {
     this.projectClicked.next(project);
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 }

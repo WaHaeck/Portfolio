@@ -1,6 +1,10 @@
+@import "./constants.scss";
+
 body {
     font-family: "Montserrat", serif !important;
     margin: 0px;
+    background-color: $background;
+    color: $color;
 }
 
 h2 {

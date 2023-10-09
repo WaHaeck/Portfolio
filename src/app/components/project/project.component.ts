@@ -13,7 +13,9 @@ export class ProjectComponent {
   @Input()
   public project: Project | undefined;
 
-  constructor() { }
+  constructor() {
+    window.scrollTo({ top: 0 })
+  }
 
   public handleBackClicked(): void {
     this.backClicked.next();

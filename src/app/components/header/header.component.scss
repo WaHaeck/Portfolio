@@ -1,57 +1,95 @@
 @import './../../../constants.scss';
 
 :host {
+    position: relative;
+}
+
+.header {
     display: flex;
     background-color: $color;
-    padding: 80px;
+    color: $background;
+    padding: 40px;
     justify-content: center;
     gap: 60px;
-}
 
-.profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
-}
-
-.content {
-    max-width: 600px;
-    color: white;
-
-    h2 {
-        margin-top: 0px;
-        color: $accent;
-    }
-
-    .socials {
-        margin-top: 20px;
+    .profile {
         display: flex;
-        justify-content: left;
-        gap: 5px;
+        justify-content: center;
+        align-items: center;
 
         img {
-            width: 30px;
-            height: 30px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    }
+
+    .content {
+        max-width: 600px;
+
+        h2 {
+            margin-top: 0px;
+            color: $background;
+        }
+
+        .socials {
+            margin-top: 20px;
+            display: flex;
+            justify-content: left;
+            gap: 5px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
 
-@media (max-width: 768px) {
-    :host {
-        flex-direction: column;
+.line {
+    position: absolute;
+    bottom: -8px;
+    width: 500px;
+    border: 8px solid $accent;
+    animation-name: line;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+}
+
+@keyframes line {
+    0% {
+        width: 0px;
     }
 
-    .content {
-        text-align: center;
+    100% {
+        width: 500px;
+    }
+}
 
-        .socials {
-            justify-content: center;
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+
+        .content {
+            text-align: center;
+
+            .socials {
+                justify-content: center;
+            }
+        }
+    }
+
+    .line {
+        width: 250px;
+    }
+
+    @keyframes line {
+        0% {
+            width: 0px;
+        }
+
+        100% {
+            width: 250px;
         }
     }
 }

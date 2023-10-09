@@ -3,10 +3,11 @@
 :host {
     text-align: center;
     padding: 80px;
+    position: relative;
 }
 
 h2 {
-    color: $accent;
+    color: $color;
     margin-bottom: 20px;
 }
 
